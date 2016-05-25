@@ -1,0 +1,29 @@
+@import "../utils/_fonts";
+
+.box {
+  padding: 20px;
+
+  .text {
+    color: red;
+    font-family: 'Sifonn', sans-serif;
+    font-size: 80px;
+    text-transform: uppercase;
+    display: inline-block;
+    width: 100%;
+  }
+
+  .glyphicon-envelope {
+    font-size: 30px;
+    color: dodgerblue;
+    display: inline-block;
+    width: 100%;
+  }
+
+  .more-text {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 20px;
+    color: #0f0f0f;
+    display: inline-block;
+    width: 100%;
+  }
+}

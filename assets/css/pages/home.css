@@ -1,0 +1,35 @@
+@font-face {
+  font-family: Sifonn;
+  src: url("../../fonts/sifonn/sifonn.eot");
+  /* IE9 Compat Modes */
+  src: url("../../fonts/sifonn/sifonn.eot?#iefix") format("embedded-opentype"), url("../../fonts/sifonn/sifonn.woff2") format("woff2"), url("../../fonts/sifonn/sifonn.woff") format("woff"), url("../../fonts/sifonn/sifonn.ttf") format("truetype"), url("../../fonts/sifonn/sifonn.svg#svgFontName") format("svg");
+  /* Legacy iOS */
+}
+/* line 3, ../../compass/sass/pages/home.scss */
+.box {
+  padding: 20px;
+}
+/* line 6, ../../compass/sass/pages/home.scss */
+.box .text {
+  color: red;
+  font-family: 'Sifonn', sans-serif;
+  font-size: 80px;
+  text-transform: uppercase;
+  display: inline-block;
+  width: 100%;
+}
+/* line 15, ../../compass/sass/pages/home.scss */
+.box .glyphicon-envelope {
+  font-size: 30px;
+  color: dodgerblue;
+  display: inline-block;
+  width: 100%;
+}
+/* line 22, ../../compass/sass/pages/home.scss */
+.box .more-text {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 20px;
+  color: #0f0f0f;
+  display: inline-block;
+  width: 100%;
+}
