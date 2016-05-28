@@ -1,0 +1,50 @@
+@import "../utils/colors";
+@import "../utils/fonts";
+@import "header";
+
+html, body {
+  height: 100%;
+}
+
+.site-background {
+  background-color: $blue3;
+  height: 100%;
+
+  .row {
+    height: 100%;
+
+    .col-xs-12 {
+      padding-top: 120px;
+      height: 100%;
+      background-color: $blue3;
+      display: inline-block;
+      text-align: center;
+      float: none;
+
+      .col-xs-9 {
+        padding-top: 150px;
+        height: 85%;
+        background-color: $blue4;
+        display: inline-block;
+        text-align: center;
+        float: none;
+
+        .col-xs-9 {
+          padding-top: 100px;
+          height: 75%;
+          background-color: $gray1;
+          display: inline-block;
+          text-align: center;
+          float: none;
+
+          .text {
+            color: $gray2;
+            font-size: 70px;
+            font-family: Sifonn, sans-serif;
+            text-transform: uppercase;
+          }
+        }
+      }
+    }
+  }
+}

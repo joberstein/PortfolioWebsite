@@ -1,0 +1,137 @@
+
+nav {
+  background-color: $blue1;
+  height: 130px;
+
+  .name {
+    display: inline-block;
+    float: left;
+    color: $blue2;
+    font-family: Sifonn, sans-serif;
+    font-size: 65px;
+    line-height: 65px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    padding-top: 15px;
+    padding-left: 30px;
+
+    &.lg {
+      font-size: 62px;
+    }
+
+    &.md {
+      font-size: 50px;
+    }
+
+    &.sm {
+      font-size: 60px;
+      padding-left: 0;
+      text-align: center;
+    }
+
+    &.xs {
+      font-size: 35px;
+      line-height: 45px;
+      padding-left: 0;
+      text-align: center;
+      margin-bottom: -30px;
+    }
+  }
+
+  .right-side {
+    display: block;
+
+    .links, .icons {
+      display: block;
+      list-style: none;
+      padding: 20px 0 0;
+
+      .link, .icon {
+        display: inline-block;
+        float: left;
+        margin-left: 25px;
+        letter-spacing: 1px;
+
+        &:hover {
+          cursor: pointer;
+          opacity: .5;
+        }
+      }
+    }
+
+    .links {
+      .link {
+        color: $blue2;
+        font-family: Ubuntu, sans-serif;
+        font-size: 18px;
+        text-transform: uppercase;
+
+        &.selected {
+          padding-bottom: 5px;
+          border-bottom: 3px solid $blue5;
+        }
+      }
+    }
+
+    .icons {
+      padding-top: 25px;
+      clear: both;
+
+      .icon {
+        width: 30px;
+        height: 20px;
+        background-color: #AAA;
+      }
+    }
+  }
+
+  .small-menu {
+    float: left;
+    width: 100%;
+
+    .links-small {
+      list-style: none;
+      text-align: center;
+      margin-top: 50px;
+      padding-left: 0;
+      margin-bottom: 0;
+
+      .link {
+        display: inline-block;
+        width: 100%;
+        padding: 15px 0 10px;
+        background-color: $blue2;
+        color: $white;
+        font-family: Ubuntu, sans-serif;
+        font-size: 20px;
+        border-bottom: 1px solid $white;
+
+        &:hover {
+          cursor: pointer;
+          background-color: $blue5;
+        }
+      }
+    }
+
+    .icons-small {
+      display: block;
+      margin: 0 auto;
+      width: 100%;
+      padding: 15px 0 10px;
+      list-style: none;
+      text-align: center;
+      background-color: $blue2;
+
+      .icon {
+        display: inline-block;
+        height: 50px;
+        background-color: #AAA;
+        float: none;
+
+        &.space {
+          background-color: transparent;
+        }
+      }
+    }
+  }
+}

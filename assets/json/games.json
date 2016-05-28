@@ -1,0 +1,56 @@
+{ 	
+	"0": {
+		"title": "Spongebob Trivia",
+		"description": "Test how much you really know about the popular Nickelodeon show, Spongebob Squarepants.  This project focused on extracting information from an XML document and determining whether user input satisfied a condition or not.",
+		"urls": {
+			"image": "../assets/img/games/spongebob.png",
+			"video": "",
+			"github": "https://github.com/joberstein/Spongebob-Trivia",
+			"interactive": ""
+		}
+	},
+	
+	"1": {
+		"title": "Fairy Tail Magic Quiz",
+		"description": "Take this quiz to discover the type of Fairy Tail (an anime) magic you would wield if you were a character in that universe.  It was created with information extracted from an XML document, and focuses on the concept of dynamic navigation.",
+		"urls": {
+			"image": "../assets/img/games/fairy-tail.png",
+			"video": "",
+			"github": "https://github.com/joberstein/Fairy-Tail-Magic-Quiz",
+			"interactive": ""
+		}
+	},
+	
+	"2": {
+		"title": "Click n' Create",
+		"description": "Take a breather and have some fun with this simple clicking game!  Click around and then close shapes you create so that they can be filled with a randomly chosen color each time. This game focuses on interpreting user input, as well as dynamically creating PShapes in Processing.",
+		"urls": {
+			"image": "../assets/img/games/click-n-create.png",
+			"video": "",
+			"github": "https://github.com/joberstein/Click-n-Create-Shapes",
+			"interactive": ""
+		}
+	},
+	
+	"3": {
+		"title": "Twerking Robot",
+		"description": "Ever wanted to see R.O.B. from Super Smash Bros. Brawl twerk?  Well, now you can!  Using the mouse, move R.O.B. around Battlefield and watch him twerk. He may also light bushes on fire... what a character!",
+		"urls": {
+			"image": "../assets/img/games/twerking-robot.png",
+			"video": "",
+			"github": "https://github.com/joberstein/Twerking-Robot",
+			"interactive": ""
+		}
+	},
+	
+	"4": {
+		"title": "Frogger",
+		"description": "I designed this game in my Fundamentals of Computer Science 2 class.  My partner and I worked on this project for a two week span and took turns coding, finding and resizing the images we used appropriately, and writing material for an audience to read so that any person will be able to play our game.<br><br>Partner: Sam Davies",
+		"urls": {
+			"image": "../assets/img/games/frogger.png",
+			"video": "https://www.youtube.com/embed/YXut60Z_oP8",
+			"github": "",
+			"interactive": ""
+		}
+	}
+}
