@@ -43,6 +43,10 @@ Thumbs.db
 
 # Project Files #
 #################
-/assets/compass/.sass-cache/*
-/assets/compass/config.rb
-/assets/designs/*
+/app/static/compass/.sass-cache/*
+/app/static/compass/config.rb
+/app/static/designs/*
+
+# OAuth Creds #
+###############
+/app/static/json/security/keyfile.json

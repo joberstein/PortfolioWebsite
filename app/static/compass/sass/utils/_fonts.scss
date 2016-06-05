@@ -1,0 +1,13 @@
+
+
+$pathToFonts: "/static/fonts/";
+
+@font-face {
+  font-family: Sifonn;
+  src: url($pathToFonts + 'sifonn/sifonn.eot'); /* IE9 Compat Modes */
+  src: url($pathToFonts + 'sifonn/sifonn.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url($pathToFonts + 'sifonn/sifonn.woff2') format('woff2'), /* Super Modern Browsers */
+  url($pathToFonts + 'sifonn/sifonn.woff') format('woff'), /* Pretty Modern Browsers */
+  url($pathToFonts + 'sifonn/sifonn.ttf')  format('truetype'), /* Safari, Android, iOS */
+  url($pathToFonts + 'sifonn/sifonn.svg#svgFontName') format('svg'); /* Legacy iOS */
+}

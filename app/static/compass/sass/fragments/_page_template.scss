@@ -1,0 +1,60 @@
+@import "../utils/_colors";
+@import "../utils/_fonts";
+@import "header";
+@import "footer";
+
+html, body {
+  height: 100%;
+}
+
+.site-background {
+  background-color: $blue3;
+
+  .row {
+
+    .light-blue-backing {
+      padding: 80px 0 80px;
+      background-color: $blue3;
+      display: inline-block;
+      text-align: center;
+      float: none;
+
+      .dark-blue-backing {
+        padding: 120px 0 120px;
+        background-color: $blue4;
+        display: inline-block;
+        text-align: center;
+        float: none;
+
+        .light-gray-backing {
+          padding: 75px 0 75px;
+          background-color: $gray1;
+          display: inline-block;
+          text-align: center;
+          float: none;
+
+          .title {
+            color: $gray2;
+            font-size: 70px;
+            font-family: Sifonn, sans-serif;
+            text-transform: uppercase;
+            overflow: hidden;
+            width: 90%;
+            margin: 0 auto;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+          }
+
+          .text {
+            width: 90%;
+            margin: 30px auto 20px;
+            color: $gray2;
+            font-family: Ubuntu, sans-serif;
+            font-size: 20px;
+            line-height: 40px;
+          }
+        }
+      }
+    }
+  }
+}

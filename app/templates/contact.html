@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Jesse's Portfolio</title>
+    <link href="{{ url_for('static', filename='css/bootstrap/bootstrap.min.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ url_for('static', filename='css/pages/contact.css') }}" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
+</head>
+<body>
+
+<section class="container-fluid">
+    {% include 'fragments/_header.html' %}
+</section>
+
+<section class="site-background container-fluid">
+    <div class="row">
+        <div class="light-blue-backing col-xs-12">
+            <div class="dark-blue-backing col-xs-9">
+                <div class="light-gray-backing col-xs-9">
+
+                    <!--Everything above should be abstracted into the page template-->
+                    <!--Contact Page-->
+                    <ul class="top-menu col-sm-12">
+                        <li class="item col-sm-3 col-xs-12">Boston, MA</li>
+                        <li class="item col-sm-3 col-xs-12">732-241-7082</li>
+                        <li class="item col-sm-3 col-xs-12">Connect</li>
+                        <li class="item col-sm-3 col-xs-12">Resume</li>
+                    </ul>
+                    <div class="title">Contact</div>
+                    <div class="text text-center">
+                        {% if formStatus == "VIEWED" %}
+                            Drop me a note to get in touch!
+                        {% endif %}
+
+                        {% if formStatus == "FAILED" %}
+                            Sorry, your message couldn't be sent. Click <a href="/contact">here</a>
+                            to fill out the form again!
+                        {% endif %}
+
+                        {% if formStatus == "SENT" %}
+                            Thanks for your message! Feel free to poke around more if you like!
+                        {% endif %}
+                    </div>
+
+                    {% if formStatus == "VIEWED" %}
+                    <div class='col-md-5 col-sm-12 col-xs-12 form-container'>
+                        <form action="http://localhost:5000/contact" method="post" class="col-lg-6 col-md-8 col-sm-10 col-xs-12">
+                            <input name="name" placeholder="Name" required>
+                            <input name="email" type="email" placeholder="Email Address" required>
+                            <textarea name="message" placeholder="Message" rows="1" required></textarea>
+                            <div id="humanField">
+                                <label for="human">Leave this field blank please!</label>
+                                <input name="human" type="text" id="human">
+                            </div>
+                            <button name="submit" type="submit" class="submit">Send</button>
+                        </form>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="container-fluid">
+    {% include 'fragments/_footer.html' %}
+</section>
+
+<script src="{{ url_for('static', filename='js/lib/jquery-2.2.1.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/lib/bootstrap.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/lib/autosize.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/src/page-template.js') }}"></script>
+<script type="text/javascript">
+    $(function() {
+        autosize($("textarea"));
+    });
+</script>
+
+</body>
+</html>

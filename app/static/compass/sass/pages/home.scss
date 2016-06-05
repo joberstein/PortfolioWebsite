@@ -1,0 +1,33 @@
+@import "../fragments/_page_template";
+
+.page-link-boxes {
+  margin: 0 auto;
+
+  .box {
+    display: inline-block;
+    margin: 25px 0 25px;
+
+    img {
+      background-color: $blue2;
+      margin: 10px 30px 5px;
+      display: inline-block;
+      padding: 40px;
+
+      &:hover {
+        cursor: pointer;
+        opacity: .75;
+      }
+    }
+
+    .page-link-title {
+      width: 144px;
+      color: $gray1;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      background-color: $blue2;
+      margin-left: 30px;
+      padding: 5px;
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,105 @@
+@import "../fragments/_page_template";
+
+.top-menu {
+  list-style: none;
+  display: inline-block;
+  border-bottom: 5px solid $blue4;
+  background-color: $gray1;
+  position: relative;
+  top: -70px;
+  margin-bottom: -20px;
+
+  .item {
+    color: $blue4;
+    display: inline-block;
+    font-family: Ubuntu, sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 1px;
+    line-height: 30px;
+  }
+}
+
+.text {
+  text-align: center;
+}
+
+.form-container {
+  display: block;
+  width: 100%;
+  //padding-left: 30px;
+
+  form {
+    display: inline-block;
+    float: none;
+    font-family: Ubuntu, sans-serif;
+
+    input,
+    textarea {
+      background-color: transparent;
+      display: block;
+      color: $gray3;
+      width: 100%;
+      padding-left: 10px;
+      margin-bottom: 25px;
+      height: 25px;
+      border: none;
+      border-bottom: 3px solid $blue2;
+
+      &::-webkit-input-placeholder {
+        color: $gray3;
+      }
+
+      &::-moz-placeholder {
+        color: $gray3;
+        opacity: 1;
+      }
+
+      &:-ms-input-placeholder {
+        color: $gray3;
+      }
+
+      &:focus {
+        outline: none;
+        outline-offset: 0;
+        border-bottom-color: $blue5;
+      }
+
+      &:invalid {
+        border-bottom-color: $red1;
+      }
+
+      &:valid {
+        //border-bottom-color: $green1;
+      }
+    }
+
+    #humanField {
+      display: none;
+    }
+
+    textarea {
+      resize: none;
+    }
+
+    button {
+      background-color: $blue2;
+      color: $gray1;
+      font-family: Ubuntu, sans-serif;
+      text-transform: uppercase;
+      font-weight: 700;
+      border: none;
+      font-size: 20px;
+      letter-spacing: 2px;
+      padding: 15px;
+      width: 100%;
+      margin-top: 10px;
+
+      &:hover {
+        cursor: pointer;
+        opacity: .75;
+      }
+    }
+  }
+}
