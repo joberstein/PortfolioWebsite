@@ -44,7 +44,7 @@
     <div class="small-menu">
         <div class="hidden-md hidden-lg">
             <ul class="links-small">
-                {% for href, page_name, caption in navigation_bar %}
+                {% for href, page_name, caption in nav_elements %}
                     <li class="row">
                         <a class="{% if page_name == active_page %}link selected{% else %}link{% endif %}"
                            href="{{ href|e }}">{{ caption|e }}</a>
