@@ -1,31 +1,23 @@
 import base64
 from email.mime.text import MIMEText
 
-import httplib2
-from flask import Flask, request, render_template
-from flask.ext.mail import Message, Mail
-from oauth2client import client
-from oauth2client.service_account import ServiceAccountCredentials
 from apiclient.discovery import build
+from flask import request, render_template, Blueprint
 from httplib2 import Http
-from oauth2client.client import flow_from_clientsecrets
-from oauth2client.file import Storage
-from oauth2client.tools import run_flow
+from oauth2client.service_account import ServiceAccountCredentials
 
-mail = Mail()
-app = Flask(__name__)
-
+contact_page = Blueprint('contact_page', __name__)
 scopes = ['https://www.googleapis.com/auth/gmail.compose']
-credentials = ServiceAccountCredentials.from_json_keyfile_name('static/json/keyfile.json', scopes=scopes)
+credentials = ServiceAccountCredentials.from_json_keyfile_name('static/json/security/keyfile.json', scopes=scopes)
 delegated_credentials = credentials.create_delegated('admin@jesseoberstein.com')
 http_auth = delegated_credentials.authorize(Http())
 gmail_service = build('gmail', 'v1', http=http_auth)
 
 
-@app.route("/contact", methods=["GET", "POST"])
+@contact_page.route("/contact", methods=["GET", "POST"])
 def contact():
     if request.method == "GET":
-        return render_template("contact.html", pageName="contact", formStatus="VIEWED")
+        return render_template("pages/contact.html", formStatus="VIEWED")
 
     elif request.method == "POST":
         name = request.form["name"]
@@ -48,12 +40,6 @@ def send_message(request_body, human):
             gmail_service.users().messages().send(userId="me", body=request_body).execute()
         except Exception as error:
             print('An error occurred: %s' % error)
-            return render_template("contact.html", pageName="contact", formStatus="FAILED")
+            return render_template("pages/contact.html", formStatus="FAILED")
 
-    return render_template("contact.html", pageName="contact", formStatus="SENT")
-
-
-if __name__ == "__main__":
-    app.debug=True
-    app.host="localhost"
-    app.run()
+    return render_template("pages/contact.html", formStatus="SENT")

@@ -223,10 +223,3 @@ html, body {
   font-size: 20px;
   line-height: 40px;
 }
-
-/* line 5, ../../compass/sass/pages/about.scss */
-.text img {
-  margin: 40px auto;
-  text-align: center;
-  display: block;
-}

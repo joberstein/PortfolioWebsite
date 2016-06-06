@@ -1,0 +1,30 @@
+{% extends "page_template.html" %}
+{% set active_page = "home" %}
+
+{% block head %}
+    {{ super() }}
+    <link href="{{ url_for('static', filename='css/pages/home.css') }}" rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block content %}
+    <div class="title">Welcome</div>
+    <div class="text text-left">
+        Welcome to my portfolio website! Feel free to browse around until something catches your interest!
+        I’ve designed this website myself, which is really exciting because it shows that I'm making
+        progress in web and graphic design. Click on one of the sections below to get started.
+    </div>
+
+    <div class="page-link-boxes">
+        {% for href, page_name, caption in nav_elements %}
+            <div class="box">
+                <a href="{{ href|e }}"><img src="{{ url_for('static', filename='img/icons/' + page_name + '.png') }}"/></a>
+                <div class="page-link-title">{{ caption|e }}</div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
+
+{% block scripts %}
+    {{ super() }}
+    <script src="{{ url_for('static', filename='js/src/welcome-box-titles.js') }}"></script>
+{% endblock %}

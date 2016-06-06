@@ -1,8 +1,8 @@
-from flask import Flask, request, render_template
-import smtplib
-app = Flask(__name__)
+from flask import render_template, Blueprint
+
+home_page = Blueprint('home_page', __name__)
 
 
-@app.route("/", methods=["GET"])
+@home_page.route("/", methods=["GET"])
 def home():
-    return render_template("home.html")
+    return render_template("pages/home.html")

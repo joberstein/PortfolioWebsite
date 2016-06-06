@@ -55,7 +55,7 @@ nav {
         margin-left: 25px;
         letter-spacing: 1px;
 
-        &:hover {
+        &:hover:not(.selected) {
           cursor: pointer;
           opacity: .5;
         }
@@ -64,10 +64,13 @@ nav {
 
     .links {
       .link {
-        color: $blue2;
-        font-family: Ubuntu, sans-serif;
-        font-size: 18px;
-        text-transform: uppercase;
+        a {
+          color: $blue2;
+          font-family: Ubuntu, sans-serif;
+          font-size: 18px;
+          text-transform: uppercase;
+          text-decoration: none;
+        }
 
         &.selected {
           padding-bottom: 5px;
@@ -92,28 +95,30 @@ nav {
 
     .links-small {
       list-style: none;
+      background-color: $blue1;
       text-align: center;
       margin-top: 50px;
       padding-left: 0;
       margin-bottom: 0;
 
+      li:first-child {
+        border-top: 1px solid $blue2;
+      }
+
       .link {
         display: inline-block;
         width: 100%;
+        margin-top: -1px;
         padding: 15px 0 10px;
-        background-color: $blue1;
         color: $blue2;
         font-family: Ubuntu, sans-serif;
         font-size: 20px;
         border-bottom: 1px solid $blue2;
         text-transform: uppercase;
         letter-spacing: 2px;
+        text-decoration: none;
 
-        &:first-child {
-          border-top: 1px solid $blue2;
-        }
-
-        &:hover {
+        &:hover:not(.selected) {
           cursor: pointer;
           color: $white;
           background-color: $blue2;

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block head %}
+    <meta charset="UTF-8">
+        <title>Jesse's Portfolio</title>
+        <link href="{{ url_for('static', filename='css/bootstrap/bootstrap.min.css') }}" rel="stylesheet" type="text/css">
+        <link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
+    {% endblock %}
+</head>
+
+<body>
+
+{% set nav_elements = [
+    ('/about', 'about', 'About'),
+    ('/portfolio', 'portfolio', 'Portfolio'),
+    ('/contact', 'contact', 'Contact')
+] -%}
+
+<section class="container-fluid">
+    {% block header %}
+        {% with active_page=active_page, nav_elements=nav_elements  %}
+            {% include 'fragments/_header.html' %}
+        {% endwith %}
+    {% endblock %}
+</section>
+
+
+<section class="site-background container-fluid">
+    <div class="row">
+        <div class="light-blue-backing col-xs-12">
+            <div class="dark-blue-backing col-xs-9">
+                <div class="light-gray-backing col-xs-9">
+                    {% block content %}
+                    {% endblock %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="container-fluid">
+    {% block footer %}
+        {% include 'fragments/_footer.html' %}
+    {% endblock %}
+</section>
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/lib/jquery-2.2.1.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/lib/bootstrap.min.js') }}"></script>
+{% endblock %}
+
+</body>
+</html>

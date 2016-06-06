@@ -1,0 +1,14 @@
+{% extends "page_template.html" %}
+{% set active_page = "portfolio" %}
+
+{% block head %}
+    {{ super() }}
+    <link href="{{ url_for('static', filename='css/pages/portfolio.css') }}" rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block content %}
+    <div class="title">Portfolio</div>
+    <div class="text text-left">
+
+    </div>
+{% endblock %}

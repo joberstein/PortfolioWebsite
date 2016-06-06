@@ -46,6 +46,7 @@ Thumbs.db
 /app/static/compass/.sass-cache/*
 /app/static/compass/config.rb
 /app/static/designs/*
+/app/__pycache__/*
 
 # OAuth Creds #
 ###############

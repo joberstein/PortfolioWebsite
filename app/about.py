@@ -1,8 +1,8 @@
-from flask import Flask, render_template
+from flask import render_template, Blueprint
 
-app = Flask(__name__)
+about_page = Blueprint("about_page", __name__)
 
 
-@app.route("/about", methods=["GET"])
+@about_page.route("/about", methods=["GET"])
 def about():
-    return render_template("about.html")
+    return render_template("pages/about.html")
