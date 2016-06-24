@@ -3,8 +3,9 @@
 .text {
 
   img {
+    display: block;
     margin: 40px auto;
     text-align: center;
-    display: block;
+    max-width: 100%;
   }
 }

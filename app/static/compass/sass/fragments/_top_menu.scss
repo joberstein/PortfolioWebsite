@@ -1,0 +1,27 @@
+.top-menu {
+  list-style: none;
+  display: inline-block;
+  border-bottom: 5px solid $blue4;
+  background-color: $gray1;
+  position: relative;
+  top: -70px;
+  margin-bottom: -20px;
+
+  a:hover {
+    text-decoration: none;
+    opacity: .75;
+    cursor: pointer;
+  }
+
+  .item, a, a:visited, a:active {
+    color: $blue4;
+    display: inline-block;
+    font-family: Ubuntu, sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 1px;
+    line-height: 30px;
+    text-decoration: none;
+  }
+}

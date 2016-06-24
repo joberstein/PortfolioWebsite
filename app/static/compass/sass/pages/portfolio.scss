@@ -1,1 +1,37 @@
 @import "../fragments/_page_template";
+@import "../fragments/top_menu";
+
+.item {
+  font-size: 12px !important;
+
+  &.selected {
+    background-color: $blue4;
+    padding: 4px 0 1px;
+    margin-top: -5px;
+    color: $white;
+  }
+}
+
+.text {
+  button {
+    background-color: $blue2;
+    font-family: Sifonn, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 24px;
+    color: $white;
+    margin-top: 30px;
+    padding: 10px 5px 15px;
+    border: none;
+
+    img {
+      vertical-align: text-top;
+      padding-top: 3px;
+    }
+
+    &:hover {
+      cursor: pointer;
+      opacity: .75;
+    }
+  }
+}

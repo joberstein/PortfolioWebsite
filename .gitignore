@@ -43,10 +43,14 @@ Thumbs.db
 
 # Project Files #
 #################
-/app/static/compass/.sass-cache/*
-/app/static/compass/config.rb
 /app/static/designs/*
 /app/__pycache__/*
+
+# Sass Related Files #
+######################
+/app/static/compass/.sass-cache/*
+/app/static/compass/config.rb
+/app/static/css/pages/*
 
 # OAuth Creds #
 ###############

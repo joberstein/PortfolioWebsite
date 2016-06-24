@@ -144,6 +144,10 @@ nav {
         display: inline-block;
         float: none;
 
+        img {
+          max-width: 100%;
+        }
+
         &:hover {
           cursor: pointer;
           opacity: .75;

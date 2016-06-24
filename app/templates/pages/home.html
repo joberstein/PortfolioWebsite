@@ -14,13 +14,15 @@
         progress in web and graphic design. Click on one of the sections below to get started.
     </div>
 
-    <div class="page-link-boxes">
-        {% for href, page_name, caption in nav_elements %}
-            <div class="box">
-                <a href="{{ href|e }}"><img src="{{ url_for('static', filename='img/icons/' + page_name + '.png') }}"/></a>
-                <div class="page-link-title">{{ caption|e }}</div>
-            </div>
-        {% endfor %}
+    <div class="row">
+        <div class="page-link-boxes col-xs-12">
+            {% for href, page_name, caption in nav_elements %}
+                <div class="box col-xs-12 col-sm-4">
+                    <a href="{{ href|e }}"><img src="{{ url_for('static', filename='img/icons/' + page_name + '.png') }}"/></a>
+                    <div class="page-link-title">{{ caption|e }}</div>
+                </div>
+            {% endfor %}
+        </div>
     </div>
 {% endblock %}
 

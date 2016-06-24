@@ -1,122 +1,133 @@
-{ 
-	"0": {
+[
+	{
 		"title": "Pirate Troubles",
 		"description": "A story of two pirates that revolves around matching their actions to the provided soundclip.  The animation was done in Maya, and we were given these characters, which were rigged by the Eleven-Rig, to animate.",
 		"urls": {
-			"image": "../assets/img/animation/pirates.png",
+			"image": "/img/animation/pirates.png",
+			"thumbnail": "/img/animation/pirates-thumb.png",
 			"video": "https://www.youtube.com/embed/SDAsH6WmZBM",
 			"github": "",
 			"interactive": ""
 		}
 	},
 	
-	"1": {
+	{
 		"title": "The Lift",
 		"description": "A man tries to lift a very heavy box, and struggles in the process.  Specifically, in Maya, I animated this man walking over to an object, thinking about picking it up, actually picking it up, and then walking offscreen with it.",
 		"urls": {
-			"image": "../assets/img/animation/box-guy.png",
+			"image": "/img/animation/box-guy.png",
+			"thumbnail": "/img/animation/box-guy-thumb.png",
 			"video": "https://www.youtube.com/embed/SVHNXw78lVE",
 			"github": "",
 			"interactive": ""
 		}
 	},
 	
-	"2": {
+	{
 		"title": "Henry Says Hi",
 		"description": "An animation created in Blender in which I create my first character model and character rig, as well as explore concepts such as weight painting, vertex groups, constrants, the NLA editor, the Video Sequencer, the Action Editor, shape keys, lip synching, and poses.",
 		"urls": {
-			"image": "../assets/img/animation/henry.png",
+			"image": "/img/animation/henry.png",
+			"thumbnail": "/img/animation/henry-thumb.png",
 			"video": "https://www.youtube.com/embed/mNupRvxjJrs",
 			"github": "",
 			"interactive": ""
 		}
 	},
 	
-	"3": {
+	{
 		"title": "Chalk Talk Animation",
 		"description": "A boy plays catch with a chalk drawing, and soon discovers that the chalkboard is an alternate dimension!  The soundtrack in the background is audio taken from iMovie sound clips.<br><br> Partners: Alexa Azarian & Feng Shen",
 		"urls": {
-			"image": "../assets/img/animation/chalktalk.png",
+			"image": "/img/animation/chalktalk.png",
+			"thumbnail": "/img/animation/chalktalk-thumb.png",
 			"video": "https://www.youtube.com/embed/qa3wESto2tM",
 			"github": "",
 			"interactive": ""
 		}
 	},
 	
-	"4": {
+	{
 		"title": "Claymation",
 		"description": "An assortment of colored clay shapes dance to the tune of the 'Gravity Falls' theme song.  This took a number of hours to create, even though the actual video looks simple enough! <br><br> Partners: Alexa Azarian & Feng Shen",
 		"urls": {
-			"image": "../assets/img/animation/claymation.png",
+			"image": "/img/animation/claymation.png",
+			"thumbnail": "/img/animation/claymation-thumb.png",
 			"video": "https://www.youtube.com/embed/6ia9xy09yy0",
 			"github": "",
 			"interactive": ""
 		}
 	},
 	
-	"5": {
+	{
 		"title": "Lyric Animation",
 		"description": "A lyric video in which I time the sonics of the song, 'Welcome to the Working Week', by Elvis Costello, to the the written lyrics in After Effects.<br><br> Apparently, since the video contains audio that is restricted from playing on certain sites, the video can only be watched on Youtube.  Luckily, the link is provided when the video is clicked.  Sorry about that!",
 		"urls": {
-			"image": "../assets/img/animation/working-week.png",
+			"image": "/img/animation/working-week.png",
+			"thumbnail": "/img/animation/working-week-thumb.png",
 			"video": "https://www.youtube.com/embed/a0ZUsxdX_-4",
 			"github": "",
 			"interactive": ""
 		}
 	},
 	
-	"6": {
+	{
 		"title": "Lighthouse Scene",
 		"description": "A short clip of a light rotating around a lighthouse on the shore on a foggy night.  This animation was created in Blender in my junior year of high school, so that was a while ago.",
 		"urls": {
-			"image": "../assets/img/animation/lighthouse.png",
+			"image": "/img/animation/lighthouse.png",
+			"thumbnail": "/img/animation/lighthouse-thumb.png",
 			"video": "https://www.youtube.com/embed/cLyVd0Vtmss",
 			"github": "",
 			"interactive": ""
 		}
 	},
 	
-	"7": {
+	{
 		"title": "Crystal Planet",
 		"description": "A barren planet that only harbors green crystals and fireflies.  It could perhaps be the setting of a story where an alien species inhabits an undiscovered planet.  This scene created in Blender back when I was still in high school.",
 		"urls": {
-			"image": "../assets/img/animation/crystals.png",
+			"image": "/img/animation/crystals.png",
+			"thumbnail": "/img/animation/crystals-thumb.png",
 			"video": "",
 			"github": "",
 			"interactive": ""
 		}
 	},
 	
-	"8": {
+	{
 		"title": "Jungle Campfire",
 		"description": "A campfire at night within a tame jungle.  This image demonstrates knowledge of smoke simulations, particle systems, and node-compositing.  It was created in Blender during my senior year of high school.",
 		"urls": {
-			"image": "../assets/img/animation/fire.png",
+			"image": "/img/animation/fire.png",
+			"thumbnail": "/img/animation/fire-thumb.png",
 			"video": "",
 			"github": "",
 			"interactive": ""
 		}
 	},
 	
-	"9": {
+	{
 		"title": "Chanukkah Season",
 		"description": "A room filled to the brim with Chanukkah presents and winter decorations!  Menorah candles are always so awesome to see lit up!  This image was created in Blender in my junior year of high school.",
 		"urls": {
-			"image": "../assets/img/animation/chanukkah.png",
+			"image": "/img/animation/chanukkah.png",
+			"thumbnail": "/img/animation/chanukkah-thumb.png",
 			"video": "",
 			"github": "",
 			"interactive": ""
 		}
 	},
 	
-	"10": {
+	{
 		"title": "Feeding the Flower",
 		"description": "An invisible hand pours water into a potted plant's soil. Isn't magic fantastic!? This was an investigation of fluid simulations in Blender.",
 		"urls": {
-			"image": "../assets/img/animation/flower.png",
+			"image": "/img/animation/flower.png",
+			"thumbnail": "/img/animation/flower-thumb.png",
 			"video": "",
 			"github": "",
 			"interactive": ""
 		}
 	}
-}
+]
