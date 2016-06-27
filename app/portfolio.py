@@ -11,9 +11,18 @@ def portfolio():
 
 @portfolio_page.route("/portfolio/<section>", methods=["GET"])
 def portfolio_section(section):
-    with current_app.open_resource("static/json/portfolio/" + section + ".json") as file:
+    json_response = get_json_file_contents("static/json/portfolio/" + section + ".json")
+    return render_template("pages/portfolio-section.html", section_name=section, portfolio_pieces=json_response)
+
+
+@portfolio_page.route("/portfolio/<section>/<int:index>", methods=["GET"])
+def portfolio_piece(section, index):
+    json_response = get_json_file_contents("static/json/portfolio/" + section + ".json")
+    piece=json_response[index]
+    return render_template("fragments/_portfolio-piece.html", section_name=section, piece=piece)
+
+
+def get_json_file_contents(filepath):
+    with current_app.open_resource(filepath) as file:
         contents = file.read()
-        # stringy = file.decode("utf-8")
-        json_response = json.loads(contents.decode('utf-8'))
-        print(json_response)
-        return render_template("pages/portfolio-section.html")
+        return json.loads(contents.decode('utf-8'))

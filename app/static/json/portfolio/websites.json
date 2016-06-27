@@ -3,11 +3,11 @@
 		"title": "Portfolio Website v1",
 		"description": "This website is currently the most complex website I have designed so far.  It has been created using HTML, CSS, JavaScript and some JQuery code. Wireframes were created in Adobe InDesign, and transferred them to code.  I borrowed some code in order to create each portfolio piece's modal, but I styled the text and image formatting in each modal to fit my needs.  I plan on adding more functionality, such as responsiveness, in the future.",
 		"urls": {
-			"image": "/img/websites/portfolio-v1.png",
-			"thumbnail": "/img/websites/portfolio-v1-thumb.png",
+			"image": "portfolio-v1.png",
+			"thumbnail": "portfolio-v1-thumb.png",
 			"video": "",
-			"github": "https://github.com/joberstein/joberstein.github.io",
-			"interactive": "http://www.jesseoberstein.com"
+			"code": "https://github.com/joberstein/joberstein.github.io",
+			"link": "http://www.jesseoberstein.com"
 		}
 	},
 	
@@ -15,11 +15,11 @@
 		"title": "Bitcoin Website",
 		"description": "This website was developed over the course of an entire semester for my Web Design and Development class. The design of the website took many iterations to bring it to where it currently stands. In creating this website, I worked a lot with jQuery, page animations, tooltips, and DRY methodology. It's purpose is to cater to audiences who may either want to learn more about Bitcoin through it's history, or find out what exactly it is.",
 		"urls": {
-			"image": "/img/websites/bitcoin.png",
-			"thumbnail": "/img/websites/bitcoin-thumb.png",
+			"image": "bitcoin.png",
+			"thumbnail": "bitcoin-thumb.png",
 			"video": "",
-			"github": "",
-			"interactive": "http://www.jesseoberstein.com/bitcoin/welcome.html"
+			"code": "",
+			"link": "http://www.jesseoberstein.com/bitcoin/welcome.html"
 		}
 	},
 	
@@ -27,11 +27,11 @@
 		"title": "Onward Israel Blog",
 		"description": "In the summer of 2014, I traveled to Israel for two months to take part in a program called Onward Israel.  I interned for two months at Technion University in the Computer Graphics Department, traveled the country, and was able to experience culture-shock first hand.  This blog was my effort to record everything that happened, and I played with the CSS to make it look a lot more pleasing than it originally did.",
 		"urls": {
-			"image": "/img/websites/onward.png",
-			"thumbnail": "/img/websites/onward-thumb.png",
+			"image": "onward.png",
+			"thumbnail": "onward-thumb.png",
 			"video": "",
-			"github": "",
-			"interactive": "http://www.jesseoberstein.com/wp"
+			"code": "",
+			"link": "http://www.jesseoberstein.com/wp"
 		}
 	},
 	
@@ -39,24 +39,23 @@
 		"title": "Emotion Machine",
 		"description": "Feeling a little bored?  Try out my Emotion Machine!  Using CSS, I've created a website where, through a series of hovers and clicks, a user can experience shapes in a unique way and see fun animations play. The pastel color palette is even playful as well!",
 		"urls": {
-			"image": "/img/websites/emotion-machine.png",
-            "thumbnail": "/img/websites/emotion-machine-thumb.png",
+			"image": "emotion-machine.png",
+            "thumbnail": "emotion-machine-thumb.png",
 			"video": "",
-			"github": "",
-			"interactive": "http://www.jesseoberstein.com/emotions/emotion-test.html"
+			"code": "",
+			"link": "http://www.jesseoberstein.com/emotions/emotion-test.html"
 		}
 	},
-	
 	
 	{
 		"title": "Portfolio Website v0",
 		"description": "A simple and very rough portfolio that I created for a Web Basics class.  It is experimental at best, but was a building-block for my foundation of learning HTML and CSS and a good way to explore important web design fundamentals.  I've updated the text recently, but the website was created at the beginning of my second year in college.",
 		"urls": {
-			"image": "/img/websites/portfolio-v0.png",
-            "thumbnail": "/img/websites/portfolio-v0-thumb.png",
+			"image": "portfolio-v0.png",
+            "thumbnail": "portfolio-v0-thumb.png",
 			"video": "",
-			"github": "",
-			"interactive": "http://testportfolio.jesseoberstein.com"
+			"code": "",
+			"link": "http://testportfolio.jesseoberstein.com"
 		}
 	}
 ]

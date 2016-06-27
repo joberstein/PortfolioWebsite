@@ -1,0 +1,47 @@
+@import "../fragments/_page_template";
+@import "../fragments/top_menu";
+@import "../fragments/portfolio-piece";
+
+.grid {
+  margin: 20px auto 0;
+  list-style: none;
+  padding-left: 0;
+  width: 90%;
+  text-align: left;
+
+  .grid-square {
+    display: inline-block;
+    padding: 25px 45px;
+    max-width: 100%;
+
+    .tint {
+      position: relative;
+      width: 140px;
+      height: 140px;
+      float: left;
+      cursor: pointer;
+
+      &:before {
+        content: "";
+        display: block;
+        background: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        transition: all .2s linear;
+      }
+
+      &:hover {
+        &:before {
+          background: rgba(0, 0, 0, .4);
+        }
+      }
+
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+}

@@ -24,4 +24,18 @@
     line-height: 30px;
     text-decoration: none;
   }
+
+  .selected {
+    background-color: $blue4;
+    padding: 4px 0 1px;
+    margin-top: -5px;
+
+    a:hover {
+      opacity: 1;
+    }
+
+    .item, a, a:visited, a:active {
+      color: $white;
+    }
+  }
 }

@@ -3,27 +3,34 @@
 
 {% block head %}
     {{ super() }}
-    <link href="{{ url_for('static', filename='css/pages/portfolio.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ url_for('static', filename='css/pages/portfolio-section.css') }}" rel="stylesheet" type="text/css">
 {% endblock %}
 
 {% block content %}
     <ul class="top-menu col-sm-12">
-        <li class="item col-md-2 col-md-offset-1 col-xs-12"><a href="/portfolio/apps">Apps</a></li>
-        <li class="item col-md-2 col-xs-12"><a href="/portfolio/games">Games</a></li>
-        <li class="item col-md-2 col-xs-12"><a href="/portfolio/websites">Websites</a></li>
-        <li class="item col-md-2 col-xs-12"><a href="/portfolio/animation">Animation</a></li>
-        <li class="item col-md-2 col-xs-12"><a href="/portfolio/drawing">Drawing</a></li>
+        <li class="{% if 'apps' == section_name %}selected{% else %}{% endif %} item col-md-2 col-md-offset-1 col-xs-12"><a href="/portfolio/apps">Apps</a></li>
+        <li class="{% if 'games' == section_name %}selected{% else %}{% endif %} item col-md-2 col-xs-12"><a href="/portfolio/games">Games</a></li>
+        <li class="{% if 'websites' == section_name %}selected{% else %}{% endif %} item col-md-2 col-xs-12"><a href="/portfolio/websites">Websites</a></li>
+        <li class="{% if 'animation' == section_name %}selected{% else %}{% endif %} item col-md-2 col-xs-12"><a href="/portfolio/animation">Animation</a></li>
+        <li class="{% if 'drawing' == section_name %}selected{% else %}{% endif %} item col-md-2 col-xs-12"><a href="/portfolio/drawing">Drawing</a></li>
     </ul>
-    <div class="title">Portfolio</div>
-    <div class="text text-left">
-        Hey there, you've landed on my super awesome portfolio page!  I have a variety of media available for viewing,
-        from apps and games hosted on Github, to artistic works with animations posted on Youtube. Get started by
-        clicking one of the sections above, or by clicking the button below.
 
-        <div class="">
-            <button class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-12" type="button">
-                View Work <img src="{{ url_for('static', filename='img/icons/right-chevron-arrow-white.png') }}"/>
-            </button>
-        </div>
+    <div class="section-content">
+        <div class="title">{{ section_name }}</div>
+        <ul class="grid">
+            {% for piece in portfolio_pieces %}
+                <li class="grid-square">
+                    <div class="tint">
+                        <img src="{{ url_for('static', filename='img/portfolio/' + section_name + '/thumbnails/' + piece.urls.thumbnail) }}"
+                             data-index="{{loop.index - 1}}" data-section="{{section_name}}" />
+                    </div>
+                </li>
+            {% endfor %}
+        </ul>
     </div>
+{% endblock %}
+
+{% block scripts %}
+    {{ super() }}
+    <script src="{{ url_for('static', filename='js/src/portfolio-piece-click.js') }}"></script>
 {% endblock %}

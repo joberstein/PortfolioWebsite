@@ -1,17 +1,6 @@
 @import "../fragments/_page_template";
 @import "../fragments/top_menu";
 
-.item {
-  font-size: 12px !important;
-
-  &.selected {
-    background-color: $blue4;
-    padding: 4px 0 1px;
-    margin-top: -5px;
-    color: $white;
-  }
-}
-
 .text {
   button {
     background-color: $blue2;

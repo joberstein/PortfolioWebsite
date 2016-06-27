@@ -2,9 +2,10 @@
 <html lang="en">
 <head>
     {% block head %}
-    <meta charset="UTF-8">
+        <meta charset="UTF-8">
         <title>Jesse's Portfolio</title>
         <link href="{{ url_for('static', filename='css/bootstrap/bootstrap.min.css') }}" rel="stylesheet" type="text/css">
+        <link href="{{ url_for('static', filename='css/lightbox/lightbox.min.css') }}" rel="stylesheet" type="text/css">
         <link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
     {% endblock %}
 </head>
@@ -48,6 +49,15 @@
 {% block scripts %}
 <script src="{{ url_for('static', filename='js/lib/jquery-2.2.1.min.js') }}"></script>
 <script src="{{ url_for('static', filename='js/lib/bootstrap.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/lib/lightbox.min.js') }}"></script>
+<script>
+    lightbox.option({
+        'alwaysShowNavOnTouchDevices': true,
+        'disableScrolling': true,
+        'showImageNumberLabel': false,
+        'wrapAround': true
+    })
+</script>
 {% endblock %}
 
 </body>

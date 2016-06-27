@@ -3,11 +3,11 @@
 		"title": "Spongebob Trivia",
 		"description": "Test how much you really know about the popular Nickelodeon show, Spongebob Squarepants.  This project focused on extracting information from an XML document and determining whether user input satisfied a condition or not.",
 		"urls": {
-			"image": "/img/games/spongebob.png",
-			"thumbnail": "/img/games/spongebob-thumnb.png",
+			"image": "spongebob.png",
+			"thumbnail": "spongebob-thumb.png",
 			"video": "",
-			"github": "https://github.com/joberstein/Spongebob-Trivia",
-			"interactive": ""
+			"code": "https://github.com/joberstein/Spongebob-Trivia",
+			"link": ""
 		}
 	},
 	
@@ -15,11 +15,11 @@
 		"title": "Fairy Tail Magic Quiz",
 		"description": "Take this quiz to discover the type of Fairy Tail (an anime) magic you would wield if you were a character in that universe.  It was created with information extracted from an XML document, and focuses on the concept of dynamic navigation.",
 		"urls": {
-			"image": "/img/games/fairy-tail.png",
-			"thumbnail": "/img/games/fairy-tail-thumb.png",
+			"image": "fairy-tail.png",
+			"thumbnail": "fairy-tail-thumb.png",
 			"video": "",
-			"github": "https://github.com/joberstein/Fairy-Tail-Magic-Quiz",
-			"interactive": ""
+			"code": "https://github.com/joberstein/Fairy-Tail-Magic-Quiz",
+			"link": ""
 		}
 	},
 	
@@ -27,11 +27,11 @@
 		"title": "Click n' Create",
 		"description": "Take a breather and have some fun with this simple clicking game!  Click around and then close shapes you create so that they can be filled with a randomly chosen color each time. This game focuses on interpreting user input, as well as dynamically creating PShapes in Processing.",
 		"urls": {
-			"image": "/img/games/click-n-create.png",
-			"thumbnail": "/img/games/click-n-create-thumb.png",
+			"image": "click-n-create.png",
+			"thumbnail": "click-n-create-thumb.png",
 			"video": "",
-			"github": "https://github.com/joberstein/Click-n-Create-Shapes",
-			"interactive": ""
+			"code": "https://github.com/joberstein/Click-n-Create-Shapes",
+			"link": ""
 		}
 	},
 	
@@ -39,23 +39,23 @@
 		"title": "Twerking Robot",
 		"description": "Ever wanted to see R.O.B. from Super Smash Bros. Brawl twerk?  Well, now you can!  Using the mouse, move R.O.B. around Battlefield and watch him twerk. He may also light bushes on fire... what a character!",
 		"urls": {
-			"image": "/img/games/twerking-robot.png",
-			"thumbnail": "/img/games/twerking-robot-thumb.png",
+			"image": "twerking-robot.png",
+			"thumbnail": "twerking-robot-thumb.png",
 			"video": "",
-			"github": "https://github.com/joberstein/Twerking-Robot",
-			"interactive": ""
+			"code": "https://github.com/joberstein/Twerking-Robot",
+			"link": ""
 		}
 	},
 	
 	{
 		"title": "Frogger",
-		"description": "I designed this game in my Fundamentals of Computer Science 2 class.  My partner and I worked on this project for a two week span and took turns coding, finding and resizing the images we used appropriately, and writing material for an audience to read so that any person will be able to play our game.<br><br>Partner: Sam Davies",
+		"description": "I designed this game in my Fundamentals of Computer Science 2 class.  My partner and I worked on this project for a two week span and took turns coding, finding and resizing the images we used appropriately, and writing material for an audience to read so that any person will be able to play our game.\n\nPartner: Sam Davies",
 		"urls": {
-			"image": "/img/games/frogger.png",
-			"thumbnail": "/img/games/frogger-thumb.png",
+			"image": "frogger.png",
+			"thumbnail": "frogger-thumb.png",
 			"video": "https://www.youtube.com/embed/YXut60Z_oP8",
-			"github": "",
-			"interactive": ""
+			"code": "",
+			"link": ""
 		}
 	}
 ]

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+    <div class="back-row">
+        <img class="back-arrow" src="{{ url_for('static', filename='img/icons/left-arrow.png') }}"/>
+        <span class="back-to-section">Back to {{section_name}}</span>
+    </div>
+
+    <div class="title piece">{{piece.title}}</div>
+    <div class="text">{{piece.description}}</div>
+
+    <hr>
+
+    <ul class="piece-icons">
+        <li class="piece-icon">
+            <a href="{{ url_for('static', filename='img/portfolio/' + section_name + '/' + piece.urls.image) }}"
+               data-lightbox="{{ piece.title }}">
+                <img src="{{ url_for('static', filename='img/icons/image.png') }}" />
+                <span class="tooltip-custom">View Image</span>
+            </a>
+        </li>
+
+        {% if piece.urls.video %}
+            <li class="piece-icon">
+                <a href="{{piece.urls.video}}" target="_blank">
+                    <img src="{{ url_for('static', filename='img/icons/video.png') }}" />
+                    <span class="tooltip-custom">View Video</span>
+                </a>
+            </li>
+        {% endif %}
+
+        {% if piece.urls.code %}
+            <li class="piece-icon">
+                <a href="{{piece.urls.code}}" target="_blank">
+                    <img src="{{ url_for('static', filename='img/icons/code.png') }}" />
+                </a>
+                <span class="tooltip-custom">View Code</span>
+            </li>
+        {% endif %}
+
+        {% if piece.urls.link %}
+            <li class="piece-icon">
+                <a href="{{piece.urls.link}}" target="_blank">
+                    <img src="{{ url_for('static', filename='img/icons/link.png') }}" />
+                </a>
+                <span class="tooltip-custom">View Demo</span>
+            </li>
+        {% endif %}
+    </ul>
+
+    <script src="{{ url_for('static', filename='js/src/back-arrow-click.js') }}"></script>
+</body>
+</html>
