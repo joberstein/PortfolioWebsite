@@ -13,7 +13,7 @@
     <hr>
 
     <ul class="piece-icons">
-        <li class="piece-icon">
+        <li class="piece-icon tooltip-custom_container">
             <a href="{{ url_for('static', filename='img/portfolio/' + section_name + '/' + piece.urls.image) }}"
                data-lightbox="{{ piece.title }}">
                 <img src="{{ url_for('static', filename='img/icons/image.png') }}" />
@@ -22,7 +22,7 @@
         </li>
 
         {% if piece.urls.video %}
-            <li class="piece-icon">
+            <li class="piece-icon tooltip-custom_container">
                 <a href="{{piece.urls.video}}" target="_blank">
                     <img src="{{ url_for('static', filename='img/icons/video.png') }}" />
                     <span class="tooltip-custom">View Video</span>
@@ -31,7 +31,7 @@
         {% endif %}
 
         {% if piece.urls.code %}
-            <li class="piece-icon">
+            <li class="piece-icon tooltip-custom_container">
                 <a href="{{piece.urls.code}}" target="_blank">
                     <img src="{{ url_for('static', filename='img/icons/code.png') }}" />
                 </a>
@@ -40,7 +40,7 @@
         {% endif %}
 
         {% if piece.urls.link %}
-            <li class="piece-icon">
+            <li class="piece-icon tooltip-custom_container">
                 <a href="{{piece.urls.link}}" target="_blank">
                     <img src="{{ url_for('static', filename='img/icons/link.png') }}" />
                 </a>

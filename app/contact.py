@@ -1,45 +1,79 @@
-import base64
-from email.mime.text import MIMEText
+from flask import request, render_template, Blueprint, Flask, json
+from smtplib import SMTPException
+from flask.ext.mail import Mail, Message
+from validate_email import validate_email
+from app.form_status import FormStatus
 
-from apiclient.discovery import build
-from flask import request, render_template, Blueprint
-from httplib2 import Http
-from oauth2client.service_account import ServiceAccountCredentials
+JESSE_EMAIL = "joberstein12@gmail.com"
+NEW_MESSAGE_SUBJECT = "My Portfolio - Contact Form Message"
+RECEIPT_MESSAGE_SUBJECT = "Message Sent to Jesse Oberstein"
 
 contact_page = Blueprint('contact_page', __name__)
-scopes = ['https://www.googleapis.com/auth/gmail.compose']
-credentials = ServiceAccountCredentials.from_json_keyfile_name('static/json/security/keyfile.json', scopes=scopes)
-delegated_credentials = credentials.create_delegated('admin@jesseoberstein.com')
-http_auth = delegated_credentials.authorize(Http())
-gmail_service = build('gmail', 'v1', http=http_auth)
+app = Flask(__name__)
+
+app.config['MAIL_SERVER'] = 'smtp.gmail.com'
+app.config['MAIL_PORT'] = 587
+app.config['MAIL_USE_TLS'] = True
+app.config['MAIL_USERNAME'] = JESSE_EMAIL
+app.config['MAIL_DEFAULT_SENDER'] = JESSE_EMAIL
+
+with app.open_resource('static/json/security/app-secure-pass.json') as file:
+    data = json.load(file)
+    app.config['MAIL_PASSWORD'] = data["portfolio-website"]
+
+mail = Mail(app)
+auto_save= Message("", sender=JESSE_EMAIL, recipients=[JESSE_EMAIL], body="")
 
 
 @contact_page.route("/contact", methods=["GET", "POST"])
 def contact():
     if request.method == "GET":
-        return render_template("pages/contact.html", formStatus="VIEWED")
+        return render_template("pages/contact.html", FormStatusEnum=FormStatus, formStatus=FormStatus.VIEWED, autoSave=auto_save)
 
     elif request.method == "POST":
+        # Gather input fields from contact form
         name = request.form["name"]
         sender = request.form["email"]
-        message_body = request.form["message"]
-        human = request.form["human"]
+        body = request.form["message"]
+        is_robot = request.form["human"]
+        is_valid_sender = validate_email(sender)
 
-        message = MIMEText("From: " + name + "\n" + "Email: " + sender + "\n\n" + message_body)
-        message['to'] = "oberstein.j@husky.neu.edu"
-        message['from'] = "admin@jesseoberstein.com"
-        message['subject'] = "My Portfolio - Contact Form Message"
-        request_body = {'raw': str(base64.urlsafe_b64encode(message.as_string().encode("utf-8")), "utf-8")}
+        # Assemble a message from the contact form input to send to me.
+        message_body = "From: {0}\n" \
+                       "Email: {1}\n\n" \
+                       "{2}".format(name, sender, body)
+        message = compose_message(sender, [JESSE_EMAIL], NEW_MESSAGE_SUBJECT, message_body)
 
-        return send_message(request_body, not human)
+        # Assemble a message from the contact form input to send to the sender as a receipt.
+        receipt_message_body = "Hi {0},\n\n" \
+                               "You sent the following message to Jesse Oberstein via his website at " \
+                               "www.jesseoberstein.com/contact:\n\n" \
+                               "{1}".format(name, body)
+        receipt_message = compose_message(JESSE_EMAIL, [sender], RECEIPT_MESSAGE_SUBJECT, receipt_message_body)
+
+        auto_save.body = body
+        return send_messages([message, receipt_message], is_robot, is_valid_sender)
 
 
-def send_message(request_body, human):
-    if human:
+# Assemble a message object
+def compose_message(from_email, recipients, subject, body):
+    message = Message(subject, sender=from_email, recipients=recipients)
+    message.body = body
+    return message
+
+
+# Only send the provided message if the sender is human.  Otherwise, indicate the message has sent, but don't actually
+# send the message to fool spambots.
+def send_messages(messages, is_robot, is_valid_sender):
+    if not is_robot:
         try:
-            gmail_service.users().messages().send(userId="me", body=request_body).execute()
-        except Exception as error:
-            print('An error occurred: %s' % error)
-            return render_template("pages/contact.html", formStatus="FAILED")
+            if not is_valid_sender:
+                return render_template("pages/contact.html", FormStatusEnum=FormStatus, formStatus=FormStatus.FAILED, autoSave=auto_save)
+            for msg in messages:
+                mail.send(msg)
 
-    return render_template("pages/contact.html", formStatus="SENT")
+        except SMTPException:
+            return render_template("pages/contact.html", FormStatusEnum=FormStatus, formStatus=FormStatus.FAILED, autoSave=auto_save)
+
+    auto_save.body = ""
+    return render_template("pages/contact.html", FormStatusEnum=FormStatus, formStatus=FormStatus.SENT, autoSave=auto_save)

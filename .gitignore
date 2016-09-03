@@ -54,4 +54,4 @@ Thumbs.db
 
 # OAuth Creds #
 ###############
-/app/static/json/security/keyfile.json
+/app/static/json/security/app-secure-pass.json
