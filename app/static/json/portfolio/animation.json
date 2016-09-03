@@ -5,7 +5,7 @@
 		"urls": {
 			"image": "pirates.png",
 			"thumbnail": "pirates-thumb.png",
-			"video": "https://www.youtube.com/embed/SDAsH6WmZBM",
+			"video": "https://www.youtube.com/watch?v=SDAsH6WmZBM",
 			"code": "",
 			"link": ""
 		}
@@ -17,7 +17,7 @@
 		"urls": {
 			"image": "box-guy.png",
 			"thumbnail": "box-guy-thumb.png",
-			"video": "https://www.youtube.com/embed/SVHNXw78lVE",
+			"video": "https://www.youtube.com/watch?v=SVHNXw78lVE",
 			"code": "",
 			"link": ""
 		}
@@ -29,7 +29,7 @@
 		"urls": {
 			"image": "henry.png",
 			"thumbnail": "henry-thumb.png",
-			"video": "https://www.youtube.com/embed/mNupRvxjJrs",
+			"video": "https://www.youtube.com/watch?v=mNupRvxjJrs",
 			"code": "",
 			"link": ""
 		}
@@ -41,7 +41,7 @@
 		"urls": {
 			"image": "chalktalk.png",
 			"thumbnail": "chalktalk-thumb.png",
-			"video": "https://www.youtube.com/embed/qa3wESto2tM",
+			"video": "https://www.youtube.com/watch?v=qa3wESto2tM",
 			"code": "",
 			"link": ""
 		}
@@ -53,7 +53,7 @@
 		"urls": {
 			"image": "claymation.png",
 			"thumbnail": "claymation-thumb.png",
-			"video": "https://www.youtube.com/embed/6ia9xy09yy0",
+			"video": "https://www.youtube.com/watch?v=6ia9xy09yy0",
 			"code": "",
 			"link": ""
 		}
@@ -61,11 +61,11 @@
 
 	{
 		"title": "Lyric Animation",
-		"description": "A lyric video in which I time the sonics of the song, 'Welcome to the Working Week', by Elvis Costello, to the the written lyrics in After Effects.\n\n Apparently, since the video contains audio that is restricted from playing on certain sites, the video can only be watched on Youtube.  Luckily, the link is provided when the video is clicked.  Sorry about that!",
+		"description": "A lyric video in which I time the sonics of the song, 'Welcome to the Working Week', by Elvis Costello, to the the written lyrics in After Effects.",
 		"urls": {
 			"image": "working-week.png",
 			"thumbnail": "working-week-thumb.png",
-			"video": "https://www.youtube.com/embed/a0ZUsxdX_-4",
+			"video": "https://www.youtube.com/watch?v=a0ZUsxdX_-4",
 			"code": "",
 			"link": ""
 		}
@@ -77,7 +77,7 @@
 		"urls": {
 			"image": "lighthouse.png",
 			"thumbnail": "lighthouse-thumb.png",
-			"video": "https://www.youtube.com/embed/cLyVd0Vtmss",
+			"video": "https://www.youtube.com/watch?v=cLyVd0Vtmss",
 			"code": "",
 			"link": ""
 		}
