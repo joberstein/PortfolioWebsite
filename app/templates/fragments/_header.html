@@ -6,95 +6,51 @@
 <body>
 
 <nav class="row">
-    <a href="/"><span class="name lg col-lg-7 hidden-md hidden-sm hidden-xs">Jesse Oberstein</span></a>
-    <a href="/"><span class="name md hidden-lg col-md-7 hidden-sm hidden-xs">Jesse Oberstein</span></a>
-    <a href="/"><span class="name sm hidden-lg hidden-md col-sm-12 hidden-xs">Jesse Oberstein</span></a>
-    <a href="/"><span class="name xs hidden-lg hidden-md hidden-sm col-xs-12">Jesse Oberstein</span></a>
+    <a href="/"><span class="name col-md-7 col-sm-12">Jesse Oberstein</span></a>
 
-    <div class="right-side col-lg-5 col-md-5 hidden-sm hidden-xs">
-        <ul class="links pull-right">
-            {% for href, page_name, caption in nav_elements %}
-                <li class="{% if page_name == active_page %}link selected{% else %}link{% endif %}">
-                    <a href="{{ href|e }}">{{ caption|e }}</a>
-                </li>
+    <div class="right-side col-lg-5 col-md-5 col-sm-12">
+        <ul class="links">
+            {% for href, page_name in nav_elements %}
+                <a href="{{ href|e }}">
+                    <li class="link {% if page_name == active_page %}selected{% endif %}">
+                        {{ page_name|e }}
+                    </li>
+                </a>
             {% endfor %}
         </ul>
 
-        <ul class="icons pull-right">
-            <li class="icon">
+        <ul class="icons">
+            <li class="icon col-sm-2 col-xs-2">
                 <a target="blank" href="https://github.com/joberstein">
                     <img src="{{ url_for('static', filename='img/icons/github.png') }}"/>
                 </a>
             </li>
 
-            <li class="icon">
+            <li class="icon col-sm-2 col-xs-2">
                 <a target="blank" href="https://www.linkedin.com/in/jesseoberstein">
                     <img src="{{ url_for('static', filename='img/icons/linkedin.png') }}"/>
                 </a>
             </li>
 
-            <li class="icon">
+            <li class="icon col-sm-2 col-xs-2">
                 <a href="mailto:joberstein12@gmail.com">
                     <img src="{{ url_for('static', filename='img/icons/email.png') }}"/>
                 </a>
             </li>
 
-            <li class="icon">
+            <li class="icon col-sm-2 col-xs-2">
                 <a href="{{ url_for('static', filename='img/contact/resume_2016_8.png') }}" rel="prettyPhoto"
                    title="<a class='download-resume' href='/download?file_path=static/img/contact/resume_2016_8.pdf&download_name=jesse_oberstein_resume.pdf'>Download resume</a>">
                     <img src="{{ url_for('static', filename='img/icons/document.png') }}"/>
                 </a>
             </li>
 
-            <li class="icon">
+            <li class="icon col-sm-2 col-xs-2">
                 <a href="callto:+1-732-241-7082">
                     <img src="{{ url_for('static', filename='img/icons/phone.png') }}"/>
                 </a>
             </li>
         </ul>
-    </div>
-
-    <div class="small-menu">
-        <div class="hidden-md hidden-lg">
-            <ul class="links-small">
-                {% for href, page_name, caption in nav_elements %}
-                    <li class="row">
-                        <a class="{% if page_name == active_page %}link selected{% else %}link{% endif %}"
-                           href="{{ href|e }}">{{ caption|e }}</a>
-                    </li>
-                {% endfor %}
-            </ul>
-
-            <ul class="icons-small">
-                <li class="icon col-sm-2 col-xs-2">
-                    <a target="blank" href="https://github.com/joberstein">
-                        <img src="{{ url_for('static', filename='img/icons/github.png') }}"/>
-                    </a>
-                </li>
-                <li class="icon col-sm-2 col-xs-2">
-                    <a target="blank" href="https://www.linkedin.com/in/jesseoberstein">
-                        <img src="{{ url_for('static', filename='img/icons/linkedin.png') }}"/>
-                    </a>
-                </li>
-                <li class="icon col-sm-2 col-xs-2">
-                    <a href="mailto:joberstein12@gmail.com">
-                        <img src="{{ url_for('static', filename='img/icons/email.png') }}"/>
-                    </a>
-                </li>
-                <li class="icon col-sm-2 col-xs-2">
-                    <a href="{{ url_for('static', filename='img/contact/resume_2016_8.png') }}"
-                       rel="prettyPhoto"
-                       title="<a class='download-resume' href='/download?file_path=static/img/contact/resume_2016_8.pdf&download_name=jesse_oberstein_resume.pdf'>Download resume</a>">
-                        <img src="{{ url_for('static', filename='img/icons/document.png') }}"/>
-                    </a>
-                </li>
-                <li class="icon col-sm-2 col-xs-2">
-                    <a href="tel:+1-732-241-7082">
-                        <img src="{{ url_for('static', filename='img/icons/phone.png') }}"/>
-                    </a>
-                </li>
-            </ul>
-        </div>
     </div>
 </nav>
 

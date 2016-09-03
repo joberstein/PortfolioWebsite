@@ -8,44 +8,48 @@ nav {
     float: left;
     color: $blue2;
     font-family: Sifonn, sans-serif;
-    font-size: 65px;
+    font-size: 62px;
     line-height: 65px;
     letter-spacing: 5px;
     text-transform: uppercase;
     padding-top: 15px;
     padding-left: 30px;
 
-    &.lg {
-      font-size: 62px;
-    }
-
-    &.md {
+    @include lg {
       font-size: 50px;
     }
 
-    &.sm {
+    @include md {
       font-size: 60px;
+      line-height: 50px;
+      padding-top: 25px;
+    }
+
+    @include smaller-than-md {
+      font-size: 35px;
+      line-height: 35px;
       padding-left: 0;
       padding-right: 0;
       margin-bottom: -20px;
+      float: none;
+      display: block;
       text-align: center;
-    }
-
-    &.xs {
-      font-size: 35px;
-      line-height: 45px;
-      padding-left: 0;
-      padding-right: 0;
-      text-align: center;
-      margin-bottom: -30px;
     }
   }
 
   .right-side {
     display: block;
+    float: right;
+
+    @include smaller-than-md {
+      float: left;
+      width: 100%;
+      padding: 0;
+    }
 
     .links, .icons {
       display: block;
+      float: right;
       list-style: none;
       padding: 20px 0 0;
 
@@ -58,23 +62,68 @@ nav {
         &:hover:not(.selected) {
           cursor: pointer;
           opacity: .5;
+
+          @include smaller-than-md {
+            opacity: 1;
+          }
         }
       }
     }
 
     .links {
-      .link {
-        a {
-          color: $blue2;
-          font-family: Ubuntu, sans-serif;
-          font-size: 18px;
-          text-transform: uppercase;
-          text-decoration: none;
+      @include smaller-than-md {
+        display: inline-block;
+        float: none;
+        width: 100%;
+        background-color: $blue1;
+        text-align: center;
+        margin-top: 50px;
+        padding-top: 0;
+        padding-left: 0;
+        margin-bottom: 0;
+
+        li:first-child {
+          border-top: 1px solid $blue2;
         }
+      }
+
+      .link {
+        color: $blue2;
+        font-family: Ubuntu, sans-serif;
+        font-size: 15px;
+        text-transform: uppercase;
+        text-decoration: none;
 
         &.selected {
           padding-bottom: 5px;
           border-bottom: 5px solid $blue5;
+
+          @include smaller-than-md {
+            color: $white;
+            background-color: $blue2;
+          }
+        }
+
+        @include smaller-than-md {
+          display: inline-block;
+          width: 100%;
+          margin-top: -1px;
+          padding: 15px 0 10px;
+          color: $blue2;
+          font-family: Ubuntu, sans-serif;
+          font-size: 20px;
+          border-bottom: 1px solid $blue2;
+          text-transform: uppercase;
+          letter-spacing: 2px;
+          text-decoration: none;
+          float: none;
+          margin-left: 0;
+
+          &:hover:not(.selected) {
+            cursor: pointer;
+            background-color: $blue2;
+            color: $white;
+          }
         }
       }
     }
@@ -84,79 +133,109 @@ nav {
       clear: both;
 
       .icon {
-        margin-left: 35px;
+        margin-left: 10px;
+
+        @include larger-than-md {
+          width: auto;
+        }
+      }
+
+      @include smaller-than-md {
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+        padding: 15px 0 10px;
+        list-style: none;
+        text-align: center;
+        background-color: $blue1;
+
+        .icon {
+          display: inline-block;
+          float: none;
+
+          img {
+            max-width: 100%;
+          }
+
+          &:hover {
+            cursor: pointer;
+            opacity: .75;
+          }
+        }
       }
     }
+
+
   }
 
   .small-menu {
-    float: left;
-    width: 100%;
+    //float: left;
+    //width: 100%;
 
     .links-small {
-      list-style: none;
-      background-color: $blue1;
-      text-align: center;
-      margin-top: 50px;
-      padding-left: 0;
-      margin-bottom: 0;
+      //list-style: none;
+      //background-color: $blue1;
+      //text-align: center;
+      //margin-top: 50px;
+      //padding-left: 0;
+      //margin-bottom: 0;
 
       li:first-child {
-        border-top: 1px solid $blue2;
+        //border-top: 1px solid $blue2;
       }
 
       .link {
-        display: inline-block;
-        width: 100%;
-        margin-top: -1px;
-        padding: 15px 0 10px;
-        color: $blue2;
-        font-family: Ubuntu, sans-serif;
-        font-size: 20px;
-        border-bottom: 1px solid $blue2;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        text-decoration: none;
+        //display: inline-block;
+        //width: 100%;
+        //margin-top: -1px;
+        //padding: 15px 0 10px;
+        //color: $blue2;
+        //font-family: Ubuntu, sans-serif;
+        //font-size: 20px;
+        //border-bottom: 1px solid $blue2;
+        //text-transform: uppercase;
+        //letter-spacing: 2px;
+        //text-decoration: none;
 
         &:hover:not(.selected) {
-          cursor: pointer;
-          color: $white;
-          background-color: $blue2;
+          //cursor: pointer;
+          //color: $white;
+          //background-color: $blue2;
         }
 
         &.selected {
-          color: $white;
-          background-color: $blue2;
+          //color: $white;
+          //background-color: $blue2;
         }
       }
     }
 
-    .icons-small {
-      display: block;
-      margin: 0 auto;
-      width: 100%;
-      padding: 15px 0 10px;
-      list-style: none;
-      text-align: center;
-      background-color: $blue1;
-
-      .icon {
-        display: inline-block;
-        float: none;
-
-        img {
-          max-width: 100%;
-        }
-
-        &:hover {
-          cursor: pointer;
-          opacity: .75;
-        }
-
-        &.space {
-          background-color: transparent;
-        }
-      }
-    }
+    //.icons-small {
+    //  display: block;
+    //  margin: 0 auto;
+    //  width: 100%;
+    //  padding: 15px 0 10px;
+    //  list-style: none;
+    //  text-align: center;
+    //  background-color: $blue1;
+    //
+    //  .icon {
+    //    display: inline-block;
+    //    float: none;
+    //
+    //    img {
+    //      max-width: 100%;
+    //    }
+    //
+    //    &:hover {
+    //      cursor: pointer;
+    //      opacity: .75;
+    //    }
+    //
+    //    &.space {
+    //      background-color: transparent;
+    //    }
+    //  }
+    //}
   }
 }

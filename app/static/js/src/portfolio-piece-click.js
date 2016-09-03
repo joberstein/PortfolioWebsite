@@ -15,6 +15,6 @@ $(".grid-square").click(function() {
         var $section = $(".section-content");
         $section.empty();
         $section.append(data);
-        console.log(data);
+        $('html, body').animate({ scrollTop: 0 }, 0);
     });
 });

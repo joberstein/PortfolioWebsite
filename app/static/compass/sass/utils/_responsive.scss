@@ -1,0 +1,83 @@
+/* Responsible for controlling media queries for common devices sizes. */
+
+$xsmall-width: 480px;
+$small-width: 768px;
+$medium-width: 992px;
+$large-width: 1200px;
+
+//================================================================================
+// Base Range Sizes
+//================================================================================
+@mixin xs {
+  @media (max-width: #{$xsmall-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin sm {
+  @media (min-width: #{$xsmall-width}) and (max-width: #{$small-width - 1}) {
+    @content;
+  }
+}
+
+
+@mixin md {
+  @media (min-width: #{$small-width}) and (max-width: #{$medium-width - 1}) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media (min-width: #{$medium-width}) and (max-width: #{$large-width - 1}) {
+    @content;
+  }
+}
+
+@mixin xl {
+  @media (min-width: #{$large-width}) {
+    @content;
+  }
+}
+
+
+//================================================================================
+// Smaller Than Sizes
+//================================================================================
+@mixin smaller-than-sm {
+  @media (max-width: #{$small-width - 1}) {
+    @content;
+  }
+}
+
+@mixin smaller-than-md {
+  @media (max-width: #{$medium-width - 1}) {
+    @content;
+  }
+}
+
+@mixin smaller-than-lg {
+  @media (max-width: #{$large-width - 1}) {
+    @content;
+  }
+}
+
+//================================================================================
+// Larger Than Sizes
+//================================================================================
+@mixin larger-than-xs {
+  @media (min-width: #{$xsmall-width}) {
+    @content;
+  }
+}
+
+@mixin larger-than-sm {
+  @media (min-width: #{$small-width}) {
+    @content;
+  }
+}
+
+@mixin larger-than-md {
+  @media (min-width: #{$medium-width}) {
+    @content;
+  }
+}

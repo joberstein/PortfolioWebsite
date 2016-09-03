@@ -1,6 +1,14 @@
 {% extends "page_template.html" %}
 {% set active_page = "portfolio" %}
 
+{% set portfolio_sections = [
+    ('apps'),
+    ('games'),
+    ('websites'),
+    ('animation'),
+    ('drawing')
+] -%}
+
 {% block head %}
     {{ super() }}
     <link href="{{ url_for('static', filename='css/pages/portfolio-section.css') }}" rel="stylesheet" type="text/css">
@@ -8,11 +16,13 @@
 
 {% block content %}
     <ul class="top-menu col-sm-12">
-        <li class="{% if 'apps' == section_name %}selected{% else %}{% endif %} item col-md-2 col-md-offset-1 col-xs-12"><a href="/portfolio/apps">Apps</a></li>
-        <li class="{% if 'games' == section_name %}selected{% else %}{% endif %} item col-md-2 col-xs-12"><a href="/portfolio/games">Games</a></li>
-        <li class="{% if 'websites' == section_name %}selected{% else %}{% endif %} item col-md-2 col-xs-12"><a href="/portfolio/websites">Websites</a></li>
-        <li class="{% if 'animation' == section_name %}selected{% else %}{% endif %} item col-md-2 col-xs-12"><a href="/portfolio/animation">Animation</a></li>
-        <li class="{% if 'drawing' == section_name %}selected{% else %}{% endif %} item col-md-2 col-xs-12"><a href="/portfolio/drawing">Drawing</a></li>
+        {% for page_name in portfolio_sections %}
+        <li class="item col-md-2 col-xs-12
+            {% if loop.index == 1 %}col-md-offset-1{% endif %}
+            {% if page_name == section_name %}selected{% else %}{% endif %}">
+            <a href="{{ '/portfolio/' + page_name|e }}">{{ page_name|e }}</a>
+        </li>
+        {% endfor %}
     </ul>
 
     <div class="section-content">

@@ -31,6 +31,10 @@
     font-size: 40px !important;
     white-space: normal !important;
     margin-bottom: 15px !important;
+
+    @include smaller-than-sm {
+      font-size: 35px !important;
+    }
   }
 }
 
@@ -48,6 +52,7 @@
 
 .text {
   clear: both;
+  text-align: left;
   white-space: pre-wrap;
   margin-top: 15px !important;
 }

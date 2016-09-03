@@ -1,6 +1,14 @@
 {% extends "page_template.html" %}
 {% set active_page = "portfolio" %}
 
+{% set portfolio_sections = [
+    ('apps'),
+    ('games'),
+    ('websites'),
+    ('animation'),
+    ('drawing')
+] -%}
+
 {% block head %}
     {{ super() }}
     <link href="{{ url_for('static', filename='css/pages/portfolio.css') }}" rel="stylesheet" type="text/css">
@@ -8,11 +16,11 @@
 
 {% block content %}
     <ul class="top-menu col-sm-12">
-        <li class="item col-md-2 col-md-offset-1 col-xs-12"><a href="/portfolio/apps">Apps</a></li>
-        <li class="item col-md-2 col-xs-12"><a href="/portfolio/games">Games</a></li>
-        <li class="item col-md-2 col-xs-12"><a href="/portfolio/websites">Websites</a></li>
-        <li class="item col-md-2 col-xs-12"><a href="/portfolio/animation">Animation</a></li>
-        <li class="item col-md-2 col-xs-12"><a href="/portfolio/drawing">Drawing</a></li>
+        {% for page_name in portfolio_sections %}
+            <li class="item col-md-2 col-xs-12 {% if loop.index == 1 %}col-md-offset-1{% endif %}">
+                <a href="{{ '/portfolio/' + page_name|e }}">{{ page_name|e }}</a>
+            </li>
+        {% endfor %}
     </ul>
     <div class="title">Portfolio</div>
     <div class="text text-left">

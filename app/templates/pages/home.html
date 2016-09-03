@@ -16,10 +16,10 @@
 
     <div class="row">
         <div class="page-link-boxes col-xs-12">
-            {% for href, page_name, caption in nav_elements %}
+            {% for href, page_name in nav_elements %}
                 <div class="box col-xs-12 col-sm-4">
                     <a href="{{ href|e }}"><img src="{{ url_for('static', filename='img/icons/' + page_name + '.png') }}"/></a>
-                    <div class="page-link-title">{{ caption|e }}</div>
+                    <div class="page-link-title">{{ page_name|e }}</div>
                 </div>
             {% endfor %}
         </div>

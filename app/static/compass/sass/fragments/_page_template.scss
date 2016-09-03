@@ -1,5 +1,6 @@
 @import "../utils/_colors";
 @import "../utils/_fonts";
+@import "../utils/_responsive";
 @import "header";
 @import "footer";
 
@@ -26,6 +27,18 @@ html, body {
         text-align: center;
         float: none;
 
+        @include lg {
+          padding: 90px 0 90px;
+        }
+
+        @include md {
+          padding: 60px 0 60px;
+        }
+
+        @include smaller-than-sm {
+          padding: 40px 0 40px;
+        }
+
         .light-gray-backing {
           padding: 75px 0 75px;
           background-color: $gray1;
@@ -43,6 +56,14 @@ html, body {
             margin: 0 auto;
             text-overflow: ellipsis;
             white-space: nowrap;
+
+            @include smaller-than-md {
+              font-size: 55px;
+            }
+
+            @include smaller-than-sm {
+              font-size: 40px;
+            }
           }
 
           .text {
