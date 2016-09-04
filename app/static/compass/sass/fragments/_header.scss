@@ -137,6 +137,14 @@ nav {
 
         @include larger-than-md {
           width: auto;
+
+          &.mobile-phone {
+            display: none;
+          }
+
+          &.desktop-phone {
+            display: inline-block;
+          }
         }
       }
 
@@ -153,6 +161,14 @@ nav {
           display: inline-block;
           float: none;
 
+          &.mobile-phone {
+            display: inline-block;
+          }
+
+          &.desktop-phone {
+            display: none;
+          }
+
           img {
             max-width: 100%;
           }
@@ -164,78 +180,5 @@ nav {
         }
       }
     }
-
-
-  }
-
-  .small-menu {
-    //float: left;
-    //width: 100%;
-
-    .links-small {
-      //list-style: none;
-      //background-color: $blue1;
-      //text-align: center;
-      //margin-top: 50px;
-      //padding-left: 0;
-      //margin-bottom: 0;
-
-      li:first-child {
-        //border-top: 1px solid $blue2;
-      }
-
-      .link {
-        //display: inline-block;
-        //width: 100%;
-        //margin-top: -1px;
-        //padding: 15px 0 10px;
-        //color: $blue2;
-        //font-family: Ubuntu, sans-serif;
-        //font-size: 20px;
-        //border-bottom: 1px solid $blue2;
-        //text-transform: uppercase;
-        //letter-spacing: 2px;
-        //text-decoration: none;
-
-        &:hover:not(.selected) {
-          //cursor: pointer;
-          //color: $white;
-          //background-color: $blue2;
-        }
-
-        &.selected {
-          //color: $white;
-          //background-color: $blue2;
-        }
-      }
-    }
-
-    //.icons-small {
-    //  display: block;
-    //  margin: 0 auto;
-    //  width: 100%;
-    //  padding: 15px 0 10px;
-    //  list-style: none;
-    //  text-align: center;
-    //  background-color: $blue1;
-    //
-    //  .icon {
-    //    display: inline-block;
-    //    float: none;
-    //
-    //    img {
-    //      max-width: 100%;
-    //    }
-    //
-    //    &:hover {
-    //      cursor: pointer;
-    //      opacity: .75;
-    //    }
-    //
-    //    &.space {
-    //      background-color: transparent;
-    //    }
-    //  }
-    //}
   }
 }
