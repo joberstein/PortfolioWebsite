@@ -52,6 +52,6 @@ Thumbs.db
 /app/static/compass/config.rb
 /app/static/css/pages/*
 
-# OAuth Creds #
-###############
+# Secure Creds #
+################
 /app/static/json/security/app-secure-pass.json

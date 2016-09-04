@@ -138,8 +138,10 @@ nav {
         @include larger-than-md {
           width: auto;
 
-          &.mobile-phone {
-            display: none !important;
+          a {
+            &.mobile-phone {
+              display: none;
+            }
           }
         }
       }
@@ -156,8 +158,10 @@ nav {
         .icon {
           float: none;
 
-          &.desktop-phone {
-            display: none !important;
+          a {
+            &.desktop-phone {
+              display: none;
+            }
           }
 
           img {
