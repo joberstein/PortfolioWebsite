@@ -139,11 +139,7 @@ nav {
           width: auto;
 
           &.mobile-phone {
-            display: none;
-          }
-
-          &.desktop-phone {
-            display: inline-block;
+            display: none !important;
           }
         }
       }
@@ -158,15 +154,10 @@ nav {
         background-color: $blue1;
 
         .icon {
-          display: inline-block;
           float: none;
 
-          &.mobile-phone {
-            display: inline-block;
-          }
-
           &.desktop-phone {
-            display: none;
+            display: none !important;
           }
 
           img {
