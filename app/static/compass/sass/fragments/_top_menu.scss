@@ -31,12 +31,27 @@
     @include lg {
       font-size: 12px;
     }
+
+    @include smaller-than-md {
+      line-height: normal;
+      font-size: 30px;
+      width: 100%;
+      padding: 15px 0 20px;
+
+      .item {
+        border-bottom: 1px solid $blue4;
+      }
+    }
   }
 
   .selected {
     background-color: $blue4;
     padding: 4px 0 1px;
     margin-top: -5px;
+
+    @include smaller-than-md {
+      padding: 15px 0 20px;
+    }
 
     a:hover {
       opacity: 1;

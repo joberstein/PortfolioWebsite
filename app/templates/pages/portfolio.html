@@ -17,9 +17,11 @@
 {% block content %}
     <ul class="top-menu col-sm-12">
         {% for page_name in portfolio_sections %}
-            <li class="item col-md-2 col-xs-12 {% if loop.index == 1 %}col-md-offset-1{% endif %}">
-                <a href="{{ '/portfolio/' + page_name|e }}">{{ page_name|e }}</a>
-            </li>
+            <a href="{{ '/portfolio/' + page_name|e }}">
+                <li class="item col-md-2 col-xs-12 {% if loop.index == 1 %}col-md-offset-1{% endif %}">
+                    {{ page_name|e }}
+                </li>
+            </a>
         {% endfor %}
     </ul>
     <div class="title">Portfolio</div>

@@ -3,37 +3,50 @@ nav {
   background-color: $blue1;
   height: 125px;
 
-  .name {
-    display: inline-block;
-    float: left;
-    color: $blue2;
-    font-family: Sifonn, sans-serif;
-    font-size: 62px;
-    line-height: 65px;
-    letter-spacing: 5px;
-    text-transform: uppercase;
-    padding-top: 15px;
-    padding-left: 30px;
+  @include smaller-than-md {
+    height: auto;
+  }
 
-    @include lg {
-      font-size: 50px;
-    }
+  a:link,
+  a:active,
+  a:hover,
+  a:visited {
+    text-decoration: none;
 
-    @include md {
-      font-size: 60px;
-      line-height: 50px;
-      padding-top: 25px;
-    }
+    .name {
+      display: inline-block;
+      float: left;
+      color: $blue2;
+      font-family: Sifonn, sans-serif;
+      font-size: 62px;
+      line-height: 65px;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding-top: 15px;
+      padding-left: 30px;
 
-    @include smaller-than-md {
-      font-size: 35px;
-      line-height: 35px;
-      padding-left: 0;
-      padding-right: 0;
-      margin-bottom: -20px;
-      float: none;
-      display: block;
-      text-align: center;
+      &:hover, &:active, &:visited {
+        cursor: pointer;
+        text-decoration: none;
+      }
+
+      @include lg {
+        font-size: 50px;
+      }
+
+      @include md {
+        font-size: 60px;
+        padding-top: 25px;
+      }
+
+      @include smaller-than-md {
+        font-size: 70px;
+        padding: 30px 0 40px;
+        float: none;
+        display: block;
+        text-align: center;
+      }
     }
   }
 
@@ -42,7 +55,6 @@ nav {
     float: right;
 
     @include smaller-than-md {
-      float: left;
       width: 100%;
       padding: 0;
     }
@@ -77,7 +89,6 @@ nav {
         width: 100%;
         background-color: $blue1;
         text-align: center;
-        margin-top: 50px;
         padding-top: 0;
         padding-left: 0;
         margin-bottom: 0;
@@ -101,20 +112,21 @@ nav {
           @include smaller-than-md {
             color: $white;
             background-color: $blue2;
+            padding-bottom: 25px;
+            border-bottom: none;
           }
         }
 
         @include smaller-than-md {
           display: inline-block;
           width: 100%;
-          margin-top: -1px;
-          padding: 15px 0 10px;
+          padding: 30px 0 25px;
           color: $blue2;
           font-family: Ubuntu, sans-serif;
-          font-size: 20px;
+          font-size: 40px;
           border-bottom: 1px solid $blue2;
           text-transform: uppercase;
-          letter-spacing: 2px;
+          letter-spacing: 5px;
           text-decoration: none;
           float: none;
           margin-left: 0;
@@ -150,7 +162,7 @@ nav {
         display: block;
         margin: 0 auto;
         width: 100%;
-        padding: 15px 0 10px;
+        padding: 65px 0 60px;
         list-style: none;
         text-align: center;
         background-color: $blue1;
@@ -166,6 +178,10 @@ nav {
 
           img {
             max-width: 100%;
+
+            @include smaller-than-md {
+              transform: scale(3);
+            }
           }
 
           &:hover {
