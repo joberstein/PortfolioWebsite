@@ -1,13 +1,13 @@
 [
 	{
 		"title": "Portfolio Website v1",
-		"description": "This website is currently the most complex website I have designed so far.  It has been created using HTML, CSS, JavaScript and some JQuery code. Wireframes were created in Adobe InDesign, and transferred them to code.  I borrowed some code in order to create each portfolio piece's modal, but I styled the text and image formatting in each modal to fit my needs.  I plan on adding more functionality, such as responsiveness, in the future.",
+		"description": "This website was my first attempt at designing a from-scratch portfolio website. It was created using HTML, CSS, JavaScript and some JQuery code. Wireframes were created in Adobe InDesign, and transferred them to code.  I borrowed some code in order to create each portfolio piece's modal, but I styled the text and image formatting in each modal to fit my needs.  Some functionality that I added onto the original website were sticky section titles, smooth scrolling, and an expandable navigation menu.",
 		"urls": {
 			"image": "portfolio-v1.png",
 			"thumbnail": "portfolio-v1-thumb.png",
 			"video": "",
 			"code": "https://github.com/joberstein/joberstein.github.io",
-			"link": "http://www.jesseoberstein.com"
+			"link": "http://www.jesseoberstein.com/portfoliov1/index.html"
 		}
 	},
 	
