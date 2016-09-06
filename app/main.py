@@ -15,6 +15,6 @@ app.register_blueprint(contact_page)
 app.register_blueprint(download_file)
 
 if __name__ == "__main__":
-    app.debug=True
-    app.host="localhost"
+    # app.debug=True
+    # app.host="localhost"
     app.run()
