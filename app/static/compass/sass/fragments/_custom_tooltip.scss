@@ -23,6 +23,10 @@
     left: -15%;
     white-space: nowrap;
 
+    @include smaller-than-md {
+      display: none !important;
+    }
+
     &:before {
       content: "";
       border-right: 10px solid transparent;
