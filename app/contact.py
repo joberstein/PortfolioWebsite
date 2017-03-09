@@ -11,13 +11,14 @@ RECEIPT_MESSAGE_SUBJECT = "Message Sent to Jesse Oberstein"
 contact_page = Blueprint('contact_page', __name__)
 app = Flask(__name__)
 
+# Flask-Mail v0.9.0 should be installed, there is a bug with v1.0.
 app.config['MAIL_SERVER'] = 'smtp.gmail.com'
 app.config['MAIL_PORT'] = 587
 app.config['MAIL_USE_TLS'] = True
 app.config['MAIL_USERNAME'] = JESSE_EMAIL
 app.config['MAIL_DEFAULT_SENDER'] = JESSE_EMAIL
 
-with app.open_resource('static/json/security/app-secure-pass.json') as file:
+with app.open_resource('app-secure-pass.json') as file:
     data = json.load(file)
     app.config['MAIL_PASSWORD'] = data["portfolio-website"]
 

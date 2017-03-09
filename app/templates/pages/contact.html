@@ -3,6 +3,7 @@
 
 {% block head %}
     {{ super() }}
+    <meta name="description" content="The contact page for Jesse Oberstein's portfolio.">
     <link href="{{ url_for('static', filename='css/pages/contact.css') }}" rel="stylesheet" type="text/css">
 {% endblock %}
 
@@ -14,8 +15,8 @@
             <a class="item" target="blank" href="https://www.linkedin.com/in/jesseoberstein">Connect</a>
         </li>
         <li class="item col-md-3 col-xs-12">
-            <a href="{{ url_for('static', filename='img/contact/resume_2016_8.png') }}" rel="prettyPhoto"
-               title="<a class='download-resume' href='/download?file_path=static/img/contact/resume_2016_8.pdf&download_name=jesse_oberstein_resume.pdf'>Download resume</a>">Resume</a>
+            <a href="{{ url_for('static', filename=view_resume) }}" rel="prettyPhoto"
+               title="<a class='download-resume' href={{ download_resume }}>Download resume</a>">Resume</a>
         </li>
     </ul>
     <div class="title">Contact</div>

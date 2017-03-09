@@ -39,8 +39,8 @@
             </li>
 
             <li class="icon col-sm-2 col-xs-2">
-                <a href="{{ url_for('static', filename='img/contact/resume_2016_8.png') }}" rel="prettyPhoto"
-                   title="<a class='download-resume' href='/download?file_path=static/img/contact/resume_2016_8.pdf&download_name=jesse_oberstein_resume.pdf'>Download resume</a>">
+                <a href="{{ url_for('static', filename=view_resume) }}" rel="prettyPhoto"
+                   title="<a class='download-resume' href={{ download_resume }}>Download resume</a>">
                     <img src="{{ url_for('static', filename='img/icons/document.png') }}"/>
                 </a>
             </li>

@@ -2,11 +2,13 @@
 <html lang="en">
 <head>
     {% block head %}
-        <meta charset="UTF-8">
         <title>Jesse's Portfolio</title>
         <link href="{{ url_for('static', filename='css/bootstrap/bootstrap.min.css') }}" rel="stylesheet" type="text/css">
         <link href="{{ url_for('static', filename='css/prettyPhoto/prettyphoto.min.css') }}" rel="stylesheet" type="text/css">
         <link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
+        <meta charset="UTF-8">
+        <meta name="keywords" content="Software,Web,Computer,Development,Portfolio">
+        <meta name="author" content="Jesse Oberstein">
     {% endblock %}
 </head>
 
@@ -18,9 +20,20 @@
     ('/contact', 'contact')
 ] -%}
 
+{% set resume = "resume_2017_1" -%}
+{% set view_resume = "img/contact/" + resume + ".png" -%}
+{% set download_resume =
+    "/download?file_path=static/img/contact/" +
+    resume + ".pdf&download_name=jesse_oberstein_resume.pdf"
+-%}
+
 <section class="container-fluid">
     {% block header %}
-        {% with active_page=active_page, nav_elements=nav_elements  %}
+        {% with active_page=active_page,
+                nav_elements=nav_elements,
+                view_resume=view_resume,
+                download_resume=download_resume
+        %}
             {% include 'fragments/_header.html' %}
         {% endwith %}
     {% endblock %}

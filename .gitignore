@@ -54,4 +54,4 @@ Thumbs.db
 
 # Secure Creds #
 ################
-/app/static/json/security/app-secure-pass.json
+/app/app-secure-pass.json
